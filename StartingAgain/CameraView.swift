@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CameraView.swift
 //  StartingAgain
 //
 //  Created by Ellie Kim on 4/20/24.
@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CameraView: View {
     @StateObject private var model = FrameHandler()
-    @State var correct: String = "One"
+    @Binding var correct: String
     @State var isCorrect: Bool = false
+    var onCorrect: ((Bool) -> Void)?
     
     var body: some View {
         FrameView(image: model.frame, correct: $correct, isCorrect: $isCorrect)
@@ -19,8 +20,8 @@ struct ContentView: View {
                 if let frame = frame {
                     let detectedLetter = model.performHandPoseDetection(on: frame)
                     isCorrect = detectedLetter == correct
-                    if (isCorrect){
-                        print("This is correct")
+                    if isCorrect, let onCorrect = onCorrect {
+                        onCorrect(true) 
                     }
                 }
             }
@@ -28,9 +29,4 @@ struct ContentView: View {
                 model.checkPermission()
             }
     }
-}
-
-
-#Preview {
-    ContentView()
 }

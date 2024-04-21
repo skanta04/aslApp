@@ -14,9 +14,19 @@
 		7BB9EFB92BD44ABE001AAD22 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFB82BD44ABE001AAD22 /* FrameView.swift */; };
 		7BB9EFBB2BD44ACC001AAD22 /* FrameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */; };
 		7BB9EFBD2BD44F00001AAD22 /* Prototype.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */; };
+<<<<<<< HEAD
 		C4FBC2022BD45FBB0019480F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2012BD45FBB0019480F /* HomeView.swift */; };
 		C4FBC2042BD465E20019480F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2032BD465E20019480F /* LoadingView.swift */; };
 		C4FBC2072BD4826D0019480F /* wendy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4FBC2062BD4826D0019480F /* wendy.ttf */; };
+=======
+		7BB9EFC02BD47D87001AAD22 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBF2BD47D87001AAD22 /* Lesson.swift */; };
+		7BB9EFC22BD47E48001AAD22 /* LessonOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFC12BD47E48001AAD22 /* LessonOverviewView.swift */; };
+		7BB9EFC42BD47E84001AAD22 /* LessonWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFC32BD47E84001AAD22 /* LessonWidget.swift */; };
+		7BB9EFC62BD48071001AAD22 /* StartButtonWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFC52BD48071001AAD22 /* StartButtonWidget.swift */; };
+		7BB9EFC82BD4846A001AAD22 /* LetterLearningPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFC72BD4846A001AAD22 /* LetterLearningPage.swift */; };
+		7BB9EFCA2BD48AAF001AAD22 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFC92BD48AAF001AAD22 /* CameraView.swift */; };
+		7BB9EFCC2BD48CCB001AAD22 /* NextButtonWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFCB2BD48CCB001AAD22 /* NextButtonWidget.swift */; };
+>>>>>>> 4af254d7fdc4f24c6eccd36aed6d45c6ef6283e2
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +38,20 @@
 		7BB9EFB82BD44ABE001AAD22 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
 		7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Prototype.mlmodel; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		C4FBC2012BD45FBB0019480F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C4FBC2032BD465E20019480F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C4FBC2062BD4826D0019480F /* wendy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wendy.ttf; sourceTree = "<group>"; };
 		C4FBC2082BD482AE0019480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+=======
+		7BB9EFBF2BD47D87001AAD22 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		7BB9EFC12BD47E48001AAD22 /* LessonOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonOverviewView.swift; sourceTree = "<group>"; };
+		7BB9EFC32BD47E84001AAD22 /* LessonWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonWidget.swift; sourceTree = "<group>"; };
+		7BB9EFC52BD48071001AAD22 /* StartButtonWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonWidget.swift; sourceTree = "<group>"; };
+		7BB9EFC72BD4846A001AAD22 /* LetterLearningPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterLearningPage.swift; sourceTree = "<group>"; };
+		7BB9EFC92BD48AAF001AAD22 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		7BB9EFCB2BD48CCB001AAD22 /* NextButtonWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonWidget.swift; sourceTree = "<group>"; };
+>>>>>>> 4af254d7fdc4f24c6eccd36aed6d45c6ef6283e2
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +84,20 @@
 		7BB9EFA92BD44AAB001AAD22 /* StartingAgain */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				C4FBC2082BD482AE0019480F /* Info.plist */,
 				C4FBC2052BD481E70019480F /* Fonts */,
+=======
+				7BB9EFBE2BD47D7E001AAD22 /* Models */,
+>>>>>>> 4af254d7fdc4f24c6eccd36aed6d45c6ef6283e2
 				7BB9EFAA2BD44AAB001AAD22 /* StartingAgainApp.swift */,
 				7BB9EFAC2BD44AAB001AAD22 /* ContentView.swift */,
+				7BB9EFC92BD48AAF001AAD22 /* CameraView.swift */,
+				7BB9EFC12BD47E48001AAD22 /* LessonOverviewView.swift */,
+				7BB9EFC32BD47E84001AAD22 /* LessonWidget.swift */,
+				7BB9EFC72BD4846A001AAD22 /* LetterLearningPage.swift */,
+				7BB9EFCB2BD48CCB001AAD22 /* NextButtonWidget.swift */,
+				7BB9EFC52BD48071001AAD22 /* StartButtonWidget.swift */,
 				7BB9EFB82BD44ABE001AAD22 /* FrameView.swift */,
 				7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */,
 				C4FBC2012BD45FBB0019480F /* HomeView.swift */,
@@ -87,12 +117,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		C4FBC2052BD481E70019480F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				C4FBC2062BD4826D0019480F /* wendy.ttf */,
 			);
 			path = Fonts;
+=======
+		7BB9EFBE2BD47D7E001AAD22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7BB9EFBF2BD47D87001AAD22 /* Lesson.swift */,
+			);
+			path = Models;
+>>>>>>> 4af254d7fdc4f24c6eccd36aed6d45c6ef6283e2
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,12 +206,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB9EFB92BD44ABE001AAD22 /* FrameView.swift in Sources */,
+				7BB9EFC22BD47E48001AAD22 /* LessonOverviewView.swift in Sources */,
 				7BB9EFBD2BD44F00001AAD22 /* Prototype.mlmodel in Sources */,
 				7BB9EFAD2BD44AAB001AAD22 /* ContentView.swift in Sources */,
+<<<<<<< HEAD
 				C4FBC2022BD45FBB0019480F /* HomeView.swift in Sources */,
+=======
+				7BB9EFC82BD4846A001AAD22 /* LetterLearningPage.swift in Sources */,
+				7BB9EFC02BD47D87001AAD22 /* Lesson.swift in Sources */,
+				7BB9EFC42BD47E84001AAD22 /* LessonWidget.swift in Sources */,
+				7BB9EFCA2BD48AAF001AAD22 /* CameraView.swift in Sources */,
+				7BB9EFCC2BD48CCB001AAD22 /* NextButtonWidget.swift in Sources */,
+>>>>>>> 4af254d7fdc4f24c6eccd36aed6d45c6ef6283e2
 				7BB9EFBB2BD44ACC001AAD22 /* FrameHandler.swift in Sources */,
 				C4FBC2042BD465E20019480F /* LoadingView.swift in Sources */,
 				7BB9EFAB2BD44AAB001AAD22 /* StartingAgainApp.swift in Sources */,
+				7BB9EFC62BD48071001AAD22 /* StartButtonWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
