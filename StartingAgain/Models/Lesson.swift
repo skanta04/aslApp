@@ -13,5 +13,9 @@ struct Lesson: Codable {
     let name: String
     let description: String
     var currentIndex: Int
+    
+    mutating func increaseCurrentIndex() {
+        self.currentIndex += 1
+    }
 }
 
