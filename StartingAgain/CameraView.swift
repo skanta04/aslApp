@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CameraView.swift
 //  StartingAgain
 //
 //  Created by Ellie Kim on 4/20/24.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CameraView: View {
     @StateObject private var model = FrameHandler()
-    @State var correct: String = "One"
+    @Binding var correct: String
     @State var isCorrect: Bool = false
     
     var body: some View {
@@ -28,9 +28,4 @@ struct ContentView: View {
                 model.checkPermission()
             }
     }
-}
-
-
-#Preview {
-    ContentView()
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct StartingAgainApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LetterLearningPage(lesson: .constant(LetterLearningPage.lesson))
         }
     }
 }

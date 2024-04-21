@@ -90,7 +90,7 @@ class FrameHandler: NSObject, ObservableObject {
     }
 
     
-    private func performHandPoseDetection(on image: CGImage) {
+    func performHandPoseDetection(on image: CGImage) -> String {
         
         let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
         
@@ -98,7 +98,7 @@ class FrameHandler: NSObject, ObservableObject {
             try requestHandler.perform([handPoseRequest])
             
             guard let observations = handPoseRequest.results as? [VNRecognizedPointsObservation] else {
-                return
+                return ""
             }
             
             for observation in observations {
@@ -111,8 +111,9 @@ class FrameHandler: NSObject, ObservableObject {
                     print("This is the hand pose prediction: \(keypointsMultiArray)")
                     let finalPrediction = try model.prediction(poses: keypointsMultiArray)
                     print("This is the final prediction: \(finalPrediction.label)")
-                    let confidence = finalPrediction.labelProbabilities[finalPrediction.label]!
-                    print("This is the confidence levels: \(confidence)")
+                    return finalPrediction.label
+                    // let confidence = finalPrediction.labelProbabilities[finalPrediction.label]!
+                    // print("This is the confidence levels: \(confidence)")
 
                 } catch {
                     print("Error converting hand pose observation to a key points multi array: \(error.localizedDescription)")
@@ -122,6 +123,7 @@ class FrameHandler: NSObject, ObservableObject {
         catch {
             print("Error performing hand pose detection: \(error.localizedDescription)")
         }
+        return "No hand poses detection could be made"
 }
     
     func setupCaptureSession() {
