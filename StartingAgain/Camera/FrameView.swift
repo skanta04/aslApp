@@ -19,14 +19,14 @@ struct FrameView: View {
             if let image = image {
                 Image(image, scale: 1.0, orientation: .up, label: label)
                     .resizable()
-                     .aspectRatio(contentMode: .fit)
+                     .aspectRatio(contentMode: .fit) 
+                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                      .cornerRadius(10)
             } else {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .padding()
-                    Text("Camera loading")
-                        .font(.headline)
+                Color.gray
+                    .frame(width: 350, height: 400)
+                    .cornerRadius(10)
+
             }
         }
     }
@@ -35,3 +35,4 @@ struct FrameView: View {
 #Preview {
     FrameView(correct: .constant(FrameView.correctLetter), isCorrect: .constant(true))
 }
+

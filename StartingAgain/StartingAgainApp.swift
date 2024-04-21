@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct StartingAgainApp: App {
-    @State var lesson: Lesson = Lesson(toStudy: ["One", "Two", "Three"], correctStatements: ["You got it!"], number: 1, name: "Basic numbers", description: "Learning basic numbers in ASL", currentIndex: 0)
+    @State var lesson: Lesson = Lesson(toStudy: [a], correctStatements: ["You got it!"], number: 1, name: "Basic numbers", description: "Learning basic numbers in ASL", currentIndex: 0)
     var body: some Scene {
         WindowGroup {
             LetterLearningPage(lesson: $lesson)
         }
     }
 }
+
