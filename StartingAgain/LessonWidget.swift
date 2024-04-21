@@ -10,8 +10,8 @@ import SwiftUI
 struct LessonWidget: View {
     @State var lesson: Lesson
     var body: some View {
-                VStack(alignment: .leading) {
-                    VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
+                    HStack {
                         Text("Lesson \(lesson.number)")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
@@ -19,34 +19,28 @@ struct LessonWidget: View {
                         Text(lesson.name)
                             .foregroundColor(.white)
                             .font(.system(size: 15))
+                        Spacer()
                     }
-                    NavigationLink(
-                        destination: LetterLearningPage(lesson: $lesson),
-                        label: {
+                NavigationLink(
+                    destination: LetterLearningPage(lesson: $lesson),
+                    label: {
+                        VStack(alignment: .center) {
                             Text("Start")
                                 .fontWeight(.bold)
                                 .font(.system(size: 20))
                                 .foregroundColor(.white)
-                                .padding([.leading, .trailing], 20)
-                                .padding([.top, .bottom], 10)
+                                .padding([.leading, .trailing], 150)
+                                .padding([.top, .bottom], 6)
                                 .background(Color("MainGreen"))
                                 .clipShape(Capsule())
                         }
-                    )
-                }
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color("LightPurple"))
-                        .padding()
-                        .frame(width: 380, height: 150)
-                        .shadow(color: .black, radius: 5, x: 0, y: 5)
+                    }
                 )
+            }
+            .padding(.leading, 10)
+            .padding([.top, .bottom], 20)
+            .background(Color.lightPurple)
+            .cornerRadius(10)
         }
 }
-
-
-
-
-#Preview {
-    LessonWidget(lesson: Lesson(toStudy: ["A", "B", "C"], correctStatements: ["You got this!", "You rock!", "Let's go!"], number: 1, name: "Basic Letters", description: "Learning numbers A, B, and C", currentIndex: 0))
-}
+                    
