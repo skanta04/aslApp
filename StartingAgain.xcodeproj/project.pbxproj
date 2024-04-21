@@ -14,6 +14,9 @@
 		7BB9EFB92BD44ABE001AAD22 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFB82BD44ABE001AAD22 /* FrameView.swift */; };
 		7BB9EFBB2BD44ACC001AAD22 /* FrameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */; };
 		7BB9EFBD2BD44F00001AAD22 /* Prototype.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */; };
+		C4FBC2022BD45FBB0019480F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2012BD45FBB0019480F /* HomeView.swift */; };
+		C4FBC2042BD465E20019480F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2032BD465E20019480F /* LoadingView.swift */; };
+		C4FBC2072BD4826D0019480F /* wendy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4FBC2062BD4826D0019480F /* wendy.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,10 @@
 		7BB9EFB82BD44ABE001AAD22 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
 		7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Prototype.mlmodel; sourceTree = "<group>"; };
+		C4FBC2012BD45FBB0019480F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C4FBC2032BD465E20019480F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C4FBC2062BD4826D0019480F /* wendy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wendy.ttf; sourceTree = "<group>"; };
+		C4FBC2082BD482AE0019480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +64,14 @@
 		7BB9EFA92BD44AAB001AAD22 /* StartingAgain */ = {
 			isa = PBXGroup;
 			children = (
+				C4FBC2082BD482AE0019480F /* Info.plist */,
+				C4FBC2052BD481E70019480F /* Fonts */,
 				7BB9EFAA2BD44AAB001AAD22 /* StartingAgainApp.swift */,
 				7BB9EFAC2BD44AAB001AAD22 /* ContentView.swift */,
 				7BB9EFB82BD44ABE001AAD22 /* FrameView.swift */,
 				7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */,
+				C4FBC2012BD45FBB0019480F /* HomeView.swift */,
+				C4FBC2032BD465E20019480F /* LoadingView.swift */,
 				7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */,
 				7BB9EFAE2BD44AAC001AAD22 /* Assets.xcassets */,
 				7BB9EFB02BD44AAC001AAD22 /* Preview Content */,
@@ -74,6 +85,14 @@
 				7BB9EFB12BD44AAC001AAD22 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4FBC2052BD481E70019480F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C4FBC2062BD4826D0019480F /* wendy.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB9EFB22BD44AAC001AAD22 /* Preview Assets.xcassets in Resources */,
+				C4FBC2072BD4826D0019480F /* wendy.ttf in Resources */,
 				7BB9EFAF2BD44AAC001AAD22 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,7 +169,9 @@
 				7BB9EFB92BD44ABE001AAD22 /* FrameView.swift in Sources */,
 				7BB9EFBD2BD44F00001AAD22 /* Prototype.mlmodel in Sources */,
 				7BB9EFAD2BD44AAB001AAD22 /* ContentView.swift in Sources */,
+				C4FBC2022BD45FBB0019480F /* HomeView.swift in Sources */,
 				7BB9EFBB2BD44ACC001AAD22 /* FrameHandler.swift in Sources */,
+				C4FBC2042BD465E20019480F /* LoadingView.swift in Sources */,
 				7BB9EFAB2BD44AAB001AAD22 /* StartingAgainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +309,7 @@
 				DEVELOPMENT_TEAM = YKUJ5T85SQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StartingAgain/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to recognize hand gestures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -317,6 +340,7 @@
 				DEVELOPMENT_TEAM = YKUJ5T85SQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StartingAgain/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to recognize hand gestures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
