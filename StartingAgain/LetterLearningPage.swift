@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LetterLearningPage: View {
-    static let lesson = Lesson(toStudy: ["A", "B", "C"], correctStatements: ["You got this!", "You rock!", "Let's go!"], number: 1, name: "Basic Letters", description: "Learning numbers A, B, and C")
     
     @StateObject private var model = FrameHandler()
-    @State var correct: String = "1"
-
     @Binding var lesson: Lesson
+    @State private var isCorrect: Bool = false
+
+
     var body: some View {
         ZStack {
             Color("MainPurple")
@@ -34,9 +34,16 @@ struct LetterLearningPage: View {
                 // Add code for progress bar
                 Text("Sign the following letter: \(lesson.toStudy[0])")
                     .foregroundColor(Color.white)
-                CameraView(correct: $correct)
+                CameraView(correct: $lesson.toStudy[lesson.currentIndex]) { isCorrect in
+                    if isCorrect {
+                        self.isCorrect = true
+                        print("Correct letter detected!")
+                    }
+                }
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    // Add action here
+                }, label: {
                     Text("Next")
                         .foregroundColor(.black)
                         .fontWeight(.semibold)
@@ -46,11 +53,11 @@ struct LetterLearningPage: View {
                         .cornerRadius(10)
                         .shadow(color: .black, radius: 5, x: 2, y: 2)
                 })
+                .disabled(!isCorrect) // Disable button when isCorrect is false
+
             }
         }
     }
 }
 
-#Preview {
-    LetterLearningPage(lesson: .constant(LetterLearningPage.lesson))
-}
+

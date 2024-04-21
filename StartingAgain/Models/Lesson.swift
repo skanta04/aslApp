@@ -8,9 +8,10 @@
 import Foundation
 
 struct Lesson: Codable {
-    let toStudy, correctStatements: [String]
-    let number: Int
+    var toStudy, correctStatements: [String]
+    var number: Int
     let name: String
     let description: String
+    var currentIndex: Int
 }
 

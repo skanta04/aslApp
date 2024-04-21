@@ -11,6 +11,7 @@ struct CameraView: View {
     @StateObject private var model = FrameHandler()
     @Binding var correct: String
     @State var isCorrect: Bool = false
+    var onCorrect: ((Bool) -> Void)?
     
     var body: some View {
         FrameView(image: model.frame, correct: $correct, isCorrect: $isCorrect)
@@ -19,8 +20,8 @@ struct CameraView: View {
                 if let frame = frame {
                     let detectedLetter = model.performHandPoseDetection(on: frame)
                     isCorrect = detectedLetter == correct
-                    if (isCorrect){
-                        print("This is correct")
+                    if isCorrect, let onCorrect = onCorrect {
+                        onCorrect(true) 
                     }
                 }
             }
