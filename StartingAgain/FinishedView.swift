@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct FinishedView: View {
-    static var lessonPreview: Lesson = Lesson(toStudy: [one, two, three], correctStatements: ["You got this!", "You rock!", "Let's go!"], number: 2, name: "Basic Numbers", description: "Learning numbers 1, 2, and 3", currentIndex: 0)
     @Binding var lesson: Lesson
     @State private var tiltAngle: Double = 0
     let tiltAmount: Double = 20 // Adjust the amount of tilt as needed
     let animationDuration: Double = 2
+    @Binding var gameState: GameState
     
     var body: some View {
             ZStack {
@@ -80,7 +80,7 @@ struct FinishedView: View {
                                 .padding(.trailing, 10)
                             VStack(alignment: .leading) {
                                 Text("Total Time Spent")
-                                Text("3")
+                                Text(lesson.lessonLength ?? "Lesson length cannot be determined")
                                     .fontWeight(.bold)
                                     .font(.system(size: 25))
                             }
@@ -97,7 +97,22 @@ struct FinishedView: View {
                         Spacer()
                     }
                     
-                    NavigationLink(destination: LessonOverviewView()) {
+                    
+                    Button(action: {
+                        gameState = GameState.lessonOverview
+                    }, label: {
+                        Text("Continue to Keep Learning")
+                            .padding([.leading, .trailing], 40)
+                            .padding([.top, .bottom], 15)
+                            .background(Color.leafgreen)
+                            .cornerRadius(20)
+                            .padding(.bottom, 10)
+                            .foregroundColor(Color.maroon)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 20))
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    /*NavigationLink(destination: LessonOverviewView()) {
                             Text("Continue to Keep Learning")
                                 .padding([.leading, .trailing], 40)
                                 .padding([.top, .bottom], 15)
@@ -107,9 +122,8 @@ struct FinishedView: View {
                                 .foregroundColor(Color.maroon)
                                 .fontWeight(.semibold)
                                 .font(.system(size: 20))
-                        
-                    }
-                    
+                    }*/
+
                 }
                 .padding([.trailing, .leading], 20)
             }

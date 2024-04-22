@@ -14,13 +14,10 @@ struct LetterCardView: View {
     var body: some View {
         Image(imageName)
             .resizable()
-            .frame(width: 150, height: 150)
-            .padding([.leading, .trailing], 20) // Horizontal padding
-            .padding([.top, .bottom], 50) // Vertical padding
+            .padding([.top, .bottom], 10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.black, lineWidth: 2)
-                    .padding(20) // Padding for the border
             )
     }
 }

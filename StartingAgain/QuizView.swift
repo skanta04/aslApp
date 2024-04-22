@@ -3,37 +3,126 @@
 //  StartingAgain
 //
 //  Created by Ellie Kim on 4/21/24.
+/*
+
+*/
 //
 import SwiftUI
 
 struct QuizView: View {
-    static var lessonPreview: Lesson = Lesson(toStudy: [a, b, c], correctStatements: ["You got this!", "You rock!", "Let's go!"], number: 2, name: "Basic Numbers", description: "Learning numbers 1, 2, and 3", currentIndex: 0)
 
     @State var selectedLetter: String? = nil
     @State var isNextButtonEnabled: Bool = false
     @Binding var lesson: Lesson
+    @Binding var gameState: GameState
 
     
     var body: some View {
-            VStack {
-                NewLetterWidget()
+        
+
+        VStack(alignment: .leading) {
+            HStack {
+                            Image("new-leaf")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 18, height: 18)
+                                .padding(8)
+                                .background(
+                                    Circle()
+                                        .foregroundColor(Color.mainGreen)
+                                )
+                            if lesson.name == "Basic Letters" {
+                                Text("NEW LETTER!")
+                                    .font(.callout)
+                                    .foregroundColor(Color.black)
+                            }
+                            else {
+                                Text("NEW NUMBER!")
+                                    .font(.callout)
+                                    .foregroundColor(Color.black)
+                            }
+                            
+                        }
+                            .padding(.leading, 10)
+                            .padding(.bottom, 20)
+            HStack {
+                Spacer()
                 Text("Which one of these is \(lesson.toStudy[lesson.currentIndex].label)?")
-                    .font(.system(size: 20))
+                    .font(.system(size: 30))
                     .bold()
-                    .offset(x:-30)
-                
-                
-                VStack(spacing: 20) { // Vertical stack for two rows of letter card buttons
-                    HStack(spacing: 3) { // Horizontal stack for first row (A and B)
+                    .padding(.leading, 10)
+                Spacer()
+            }
+            
+            if lesson.name == "Basic Numbers" {
+                VStack(spacing: 10) { // Vertical stack for two rows of letter card buttons
+                    HStack(spacing: 15)
+                    { // Horizontal stack for first row (A and B)
                         Button(action: {
-                            self.selectLetter("A")
+                            self.selectLetter("Three")
                             if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
                                 isNextButtonEnabled = true
                             }
                         }) {
-                            LetterCardView(imageName: "a")
-                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "A" ? Color.mainGreen : Color.clear)
+                            LetterCardView(imageName: "Three")
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "Three" ? Color.mainGreen : Color.clear)
                         }
+                        
+                        Button(action: {
+                            self.selectLetter("One")
+                            if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
+                                isNextButtonEnabled = true
+                            }
+                        }) {
+                            LetterCardView(imageName: "One")
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "One" ? Color.mainGreen : Color.clear)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    .padding([.leading, .trailing], 15)
+                    
+                    HStack (spacing: 15) { // Horizontal stack for second row (C and D)
+                        Button(action: {
+                            self.selectLetter("Two")
+                            if (selectedLetter == lesson.toStudy[lesson.currentIndex].label) {
+                                isNextButtonEnabled = true
+                            }
+                        }) {
+                            LetterCardView(imageName: "Two")
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "Two" ? Color.mainGreen : Color.clear)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Button(action: {
+                            self.selectLetter("Four")
+                            if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
+                                isNextButtonEnabled = true
+                            }
+                        }) {
+                            LetterCardView(imageName: "Four")
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "Four" ? Color.mainGreen : Color.clear)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    .padding([.leading, .trailing], 15)
+
+
+                }
+
+            } else {
+                VStack(spacing: 10) { // Vertical stack for two rows of letter card buttons
+                    HStack(spacing: 15)
+                    { // Horizontal stack for first row (A and B)
+                        Button(action: {
+                            self.selectLetter("C")
+                            if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
+                                isNextButtonEnabled = true
+                            }
+                        }) {
+                            LetterCardView(imageName: "C")
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "C" ? Color.mainGreen : Color.clear)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                         
                         Button(action: {
                             self.selectLetter("B")
@@ -41,66 +130,82 @@ struct QuizView: View {
                                 isNextButtonEnabled = true
                             }
                         }) {
-                            LetterCardView(imageName: "b")
+                            LetterCardView(imageName: "B")
                                 .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "B" ? Color.mainGreen : Color.clear)
                         }
+                        .buttonStyle(PlainButtonStyle())
                     }
+                    .padding([.leading, .trailing], 15)
                     
-                    HStack(spacing: 3) { // Horizontal stack for second row (C and D)
-                        Button(action: {
-                            self.selectLetter("C")
-                            if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
-                                isNextButtonEnabled = true
-                            }
-                        }) {
-                            LetterCardView(imageName: "c")
-                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "C" ? Color.mainGreen : Color.clear)
-                        }
-                        
+                    HStack (spacing: 15) { // Horizontal stack for second row (C and D)
                         Button(action: {
                             self.selectLetter("D")
+                            if (selectedLetter == lesson.toStudy[lesson.currentIndex].label) {
+                                isNextButtonEnabled = true
+                            }
+                        }) {
+                            LetterCardView(imageName: "D")
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "D" ? Color.mainGreen : Color.clear)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Button(action: {
+                            self.selectLetter("A")
                             if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
                                 isNextButtonEnabled = true
                             }
                         }) {
-                            LetterCardView(imageName: "d")
-                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "D" ? Color.mainGreen : Color.clear)
+                            LetterCardView(imageName: "A")
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "A" ? Color.mainGreen : Color.clear)
                         }
+                        .buttonStyle(PlainButtonStyle())
                     }
-                }
-                .padding(.top, 20)
+                    .padding([.leading, .trailing], 15)
+                    
+                    
+                }}
                 
                 VStack(alignment: .center) {
                     if isNextButtonEnabled {
-                        NavigationLink(destination: LetterLearningPage(lesson: $lesson)) {
-                            Text("Next")
-                                .padding([.leading, .trailing], 130)
-                                .padding([.top, .bottom], 15)
-                                .background(Color.leafgreen)
-                                .cornerRadius(10)
-                                .padding(.bottom, 10)
-                                .foregroundColor(.black)
-                                .fontWeight(.semibold)
-                                .font(.system(size: 20))
-                        }
-                    } else {
-                        Button(action: {}, label: {
-                            Text("Keep trying")
-                                .fontWeight(.bold)
-                                .font(.system(size: 20))
-                                .foregroundColor(.black)
-                                .padding([.leading, .trailing], 100)
-                                .padding([.top, .bottom], 8)
-                                .background(Color.gray)
-                                .cornerRadius(20)
-                                .offset(y: 10)
-                                .transition(.scale)
+                        Button(action: {
+                            gameState = GameState.cameraView
+                        }, label: {
+                            HStack {
+                                Spacer()
+                                Text("Next")
+                                    .padding([.leading, .trailing], 160)
+                                    .padding([.top, .bottom], 15)
+                                    .background(Color.leafgreen)
+                                    .cornerRadius(10)
+                                    .padding(.bottom, 10)
+                                    .foregroundColor(.black)
+                                    .fontWeight(.semibold)
+                                    .font(.system(size: 20))
+                                Spacer()
+                            }
                         })
+                        .buttonStyle(PlainButtonStyle())
+                    } else {
+                        HStack {
+                            Spacer()
+                            Button(action: {}, label: {
+                                Text("Keep Trying")
+                                    .padding([.leading, .trailing], 130)
+                                    .padding([.top, .bottom], 15)
+                                    .background(Color.gray)
+                                    .cornerRadius(10)
+                                    .padding(.bottom, 10)
+                                    .foregroundColor(.black)
+                                    .fontWeight(.semibold)
+                                    .font(.system(size: 20))
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                            Spacer()
+                        }
                     }
                 }
-
-                        
-        }
+                
+            }
 
     }
 
