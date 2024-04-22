@@ -31,8 +31,8 @@ struct LessonOverviewView: View {
                 }
             }
         }
-    }
 }
+    }
 
 
 

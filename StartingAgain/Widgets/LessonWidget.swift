@@ -22,20 +22,19 @@ struct LessonWidget: View {
                 Spacer()
             }
                 NavigationLink(
-                    destination: DemoView(demo: $lesson.toStudy[lesson.currentIndex]),
+                    destination: DemoView(lesson: $lesson),
                     label: {
-                        VStack {
-                            Text("Start")
-                                .fontWeight(.bold)
-                                .font(.system(size: 20))
-                                .foregroundColor(.white)
-                                .padding([.top, .bottom], 6)
-                                .padding([.leading, .trailing], 130)
-                                .background(Color("MainGreen"))
-                                .clipShape(Capsule())
-                        }
-                    }
-                )
+                            VStack {
+                                Text("Start")
+                                    .fontWeight(.bold)
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.white)
+                                    .padding([.top, .bottom], 6)
+                                    .padding([.leading, .trailing], 130)
+                                    .background(Color("MainGreen"))
+                                    .clipShape(Capsule())
+                            }
+                        })
         }
         .padding(.leading, 10)
         .padding([.top, .bottom], 20)

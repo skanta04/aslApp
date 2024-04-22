@@ -21,6 +21,7 @@ struct NewLetterWidget: View {
                 )
             Text("NEW LETTER!")
                 .font(.callout)
+                .foregroundColor(Color.black)
         }
     }
         

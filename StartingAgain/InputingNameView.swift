@@ -4,7 +4,6 @@
 //
 //  Created by Sruthy Mammen on 4/21/24.
 //
-
 import SwiftUI
 
 extension Color {
@@ -17,13 +16,13 @@ struct InputingNameView: View {
     
     var body: some View {
         ZStack {
-            Color.maroonn.edgesIgnoringSafeArea(.all)
+            Color.white.edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 16) {
                 Text("We're so excited to have you here!")
                     .font(.title)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.maroonn)
                     .padding()
                     .bold()
                 
@@ -32,19 +31,19 @@ struct InputingNameView: View {
                     .italic()
                     .padding()
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.maroonn)
                     .offset(y:-25)
                 
                 Spacer()
                 
                 VStack(spacing: 16) {
                     Text("Tell us your first name!")
-                        .foregroundColor(Color.maroonn)
+                        .foregroundColor(Color.white)
                         .padding(.bottom, 50)
                         .offset(y: 16)
                         .font(.system(size: 30))
                     
-                    TextField("type here...", text: $firstName)
+                    TextField("Your name here...", text: $firstName)
                         .font(.system(size: 25))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
@@ -65,7 +64,7 @@ struct InputingNameView: View {
                 Spacer()
                                 
             }
-            .padding() 
+            .padding()
             
             Image("cuteleafy")
                 .resizable()
