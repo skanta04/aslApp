@@ -10,8 +10,6 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         ZStack {
-            Color.maroon
-                .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("Loading lessons ...")
                     .foregroundColor(Color.leafgreen)

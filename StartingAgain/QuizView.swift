@@ -26,7 +26,7 @@ struct QuizView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 18, height: 18)
-                                .padding(8)
+                                .padding(15)
                                 .background(
                                     Circle()
                                         .foregroundColor(Color.mainGreen)
@@ -46,7 +46,6 @@ struct QuizView: View {
                             .padding(.leading, 10)
                             .padding(.bottom, 20)
             HStack {
-                Spacer()
                 Text("Which one of these is \(lesson.toStudy[lesson.currentIndex].label)?")
                     .font(.system(size: 30))
                     .bold()
@@ -67,6 +66,8 @@ struct QuizView: View {
                             LetterCardView(imageName: "Three")
                                 .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "Three" ? Color.mainGreen : Color.clear)
                         }
+                        .buttonStyle(PlainButtonStyle())
+
                         
                         Button(action: {
                             self.selectLetter("One")

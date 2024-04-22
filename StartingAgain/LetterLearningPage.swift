@@ -6,14 +6,28 @@
 //
 
 
+import AVFoundation
 import SwiftUI
 
 struct LetterLearningPage: View {
-    
+
     @StateObject private var model = FrameHandler()
     @Binding var lesson: Lesson
-    @State private var isCorrect: Bool = false
+    @State private var isCorrect: Bool = true
     @Binding var gameState: GameState
+    
+    var player: AVAudioPlayer!
+    
+    mutating func getSound() {
+        do {
+            if let path = Bundle.main.path(forResource: "success-1-6297", ofType: "mp3") {
+                let url = URL(fileURLWithPath: path)
+                player = try AVAudioPlayer(contentsOf: url)
+            }
+        } catch {
+            print("Error loading sound file: \(error.localizedDescription)")
+        }
+    }
 
 
     var body: some View {
@@ -27,6 +41,7 @@ struct LetterLearningPage: View {
                     CameraView(correct: $lesson.toStudy[lesson.currentIndex].label) { isCorrect in
                         if isCorrect {
                             self.isCorrect = true
+                            player?.play()
                         }
                     }
                     Spacer()
@@ -43,7 +58,7 @@ struct LetterLearningPage: View {
                             Text("Great! Next letter!")
                                 .padding([.leading, .trailing], 40)
                                 .padding([.top, .bottom], 15)
-                                .background(Color.maroon)
+                                .background(Color.mainGreen)
                                 .cornerRadius(20)
                                 .padding(.bottom, 10)
                                 .foregroundColor(Color.white)
@@ -62,9 +77,9 @@ struct LetterLearningPage: View {
                             }
                         }, label: {
                             Text("Finish Lesson!")
-                                .padding([.leading, .trailing], 40)
+                                .padding([.leading, .trailing], 100)
                                 .padding([.top, .bottom], 15)
-                                .background(Color.maroon)
+                                .background(Color.mainGreen)
                                 .cornerRadius(20)
                                 .padding(.bottom, 10)
                                 .foregroundColor(Color.white)
@@ -75,15 +90,19 @@ struct LetterLearningPage: View {
                     }
                 }
                 else {
-                    Text("Keep trying!")
-                        .padding([.leading, .trailing], 40)
-                        .padding([.top, .bottom], 15)
-                        .background(Color.maroon)
-                        .cornerRadius(20)
-                        .padding(.bottom, 10)
-                        .foregroundColor(Color.white)
-                        .fontWeight(.semibold)
-                    .font(.system(size: 20))
+                    HStack {
+                        Spacer()
+                        Text("Keep trying!")
+                            .padding([.leading, .trailing], 100)
+                            .padding([.top, .bottom], 15)
+                            .background(Color.gray)
+                            .cornerRadius(20)
+                            .padding(.bottom, 10)
+                            .foregroundColor(Color.white)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 20))
+                        Spacer()
+                    }
                     
                 }
 
