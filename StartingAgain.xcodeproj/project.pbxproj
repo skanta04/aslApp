@@ -17,7 +17,6 @@
 		7BB9EFAF2BD44AAC001AAD22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9EFAE2BD44AAC001AAD22 /* Assets.xcassets */; };
 		7BB9EFB22BD44AAC001AAD22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9EFB12BD44AAC001AAD22 /* Preview Assets.xcassets */; };
 		7BB9EFBB2BD44ACC001AAD22 /* FrameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */; };
-		7BB9EFBD2BD44F00001AAD22 /* Prototype.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */; };
 		7BB9EFC02BD47D87001AAD22 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFBF2BD47D87001AAD22 /* Lesson.swift */; };
 		7BB9EFC22BD47E48001AAD22 /* LessonOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFC12BD47E48001AAD22 /* LessonOverviewView.swift */; };
 		7BB9EFC42BD47E84001AAD22 /* LessonWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFC32BD47E84001AAD22 /* LessonWidget.swift */; };
@@ -33,6 +32,7 @@
 		7BBB75842BD5B63D008BDB8C /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB75832BD5B63D008BDB8C /* FrameView.swift */; };
 		7BF5592A2BD5CCD000B2F706 /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF559292BD5CCD000B2F706 /* FinishedView.swift */; };
 		B17511582BD59AF600594D7E /* InputingNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17511572BD59AF600594D7E /* InputingNameView.swift */; };
+		C43FDC592BD641BF0091FD11 /* Prototype.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C43FDC582BD641BF0091FD11 /* Prototype.mlmodel */; };
 		C4FBC2022BD45FBB0019480F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2012BD45FBB0019480F /* HomeView.swift */; };
 		C4FBC2042BD465E20019480F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2032BD465E20019480F /* LoadingView.swift */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,6 @@
 		7BB9EFAE2BD44AAC001AAD22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BB9EFB12BD44AAC001AAD22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BB9EFBA2BD44ACC001AAD22 /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
-		7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Prototype.mlmodel; sourceTree = "<group>"; };
 		7BB9EFBF2BD47D87001AAD22 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		7BB9EFC12BD47E48001AAD22 /* LessonOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonOverviewView.swift; sourceTree = "<group>"; };
 		7BB9EFC32BD47E84001AAD22 /* LessonWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonWidget.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		7BBB75832BD5B63D008BDB8C /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = ../FrameView.swift; sourceTree = "<group>"; };
 		7BF559292BD5CCD000B2F706 /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
 		B17511572BD59AF600594D7E /* InputingNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputingNameView.swift; sourceTree = "<group>"; };
+		C43FDC582BD641BF0091FD11 /* Prototype.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Prototype.mlmodel; path = ../../MyHandPoseClassifier.ml/Models/Prototype.mlmodel; sourceTree = "<group>"; };
 		C4FBC2012BD45FBB0019480F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C4FBC2032BD465E20019480F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C4FBC2082BD482AE0019480F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				C4FBC2012BD45FBB0019480F /* HomeView.swift */,
 				B17511572BD59AF600594D7E /* InputingNameView.swift */,
 				C4FBC2032BD465E20019480F /* LoadingView.swift */,
-				7BB9EFBC2BD44EFF001AAD22 /* Prototype.mlmodel */,
+				C43FDC582BD641BF0091FD11 /* Prototype.mlmodel */,
 				7BB9EFAE2BD44AAC001AAD22 /* Assets.xcassets */,
 				7BB9EFB02BD44AAC001AAD22 /* Preview Content */,
 			);
@@ -246,7 +246,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB9EFC22BD47E48001AAD22 /* LessonOverviewView.swift in Sources */,
-				7BB9EFBD2BD44F00001AAD22 /* Prototype.mlmodel in Sources */,
 				7B3A76182BD60B710065E458 /* ContentView.swift in Sources */,
 				C4FBC2022BD45FBB0019480F /* HomeView.swift in Sources */,
 				7BBB75762BD59F91008BDB8C /* StudyMaterial.swift in Sources */,
@@ -266,6 +265,7 @@
 				C4FBC2042BD465E20019480F /* LoadingView.swift in Sources */,
 				7BBB757A2BD5AE9F008BDB8C /* DemoView.swift in Sources */,
 				7BB9EFAB2BD44AAB001AAD22 /* StartingAgainApp.swift in Sources */,
+				C43FDC592BD641BF0091FD11 /* Prototype.mlmodel in Sources */,
 				7B3A761A2BD60D740065E458 /* GameState.swift in Sources */,
 				B17511582BD59AF600594D7E /* InputingNameView.swift in Sources */,
 				7BB9EFC62BD48071001AAD22 /* StartButtonWidget.swift in Sources */,
@@ -402,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StartingAgain/Preview Content\"";
-				DEVELOPMENT_TEAM = YKUJ5T85SQ;
+				DEVELOPMENT_TEAM = D45M7AYBQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StartingAgain/Info.plist;
@@ -417,7 +417,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = appteam.StartingAgain;
+				PRODUCT_BUNDLE_IDENTIFIER = starting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -433,7 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StartingAgain/Preview Content\"";
-				DEVELOPMENT_TEAM = YKUJ5T85SQ;
+				DEVELOPMENT_TEAM = D45M7AYBQL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StartingAgain/Info.plist;
@@ -448,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = appteam.StartingAgain;
+				PRODUCT_BUNDLE_IDENTIFIER = starting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

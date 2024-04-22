@@ -115,13 +115,13 @@ struct QuizView: View {
                     HStack(spacing: 15)
                     { // Horizontal stack for first row (A and B)
                         Button(action: {
-                            self.selectLetter("C")
+                            self.selectLetter("c")
                             if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
                                 isNextButtonEnabled = true
                             }
                         }) {
                             LetterCardView(imageName: "C")
-                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "C" ? Color.mainGreen : Color.clear)
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "c" ? Color.mainGreen : Color.clear)
                         }
                         .buttonStyle(PlainButtonStyle())
                         
@@ -151,13 +151,13 @@ struct QuizView: View {
                         .buttonStyle(PlainButtonStyle())
                         
                         Button(action: {
-                            self.selectLetter("A")
+                            self.selectLetter("a")
                             if (selectedLetter == lesson.toStudy[lesson.currentIndex].label){
                                 isNextButtonEnabled = true
                             }
                         }) {
                             LetterCardView(imageName: "A")
-                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "A" ? Color.mainGreen : Color.clear)
+                                .background(selectedLetter == lesson.toStudy[lesson.currentIndex].label && lesson.toStudy[lesson.currentIndex].label == "a" ? Color.mainGreen : Color.clear)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }

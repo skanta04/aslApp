@@ -4,7 +4,6 @@
 //
 //  Created by Saishreeya Kantamsetty on 4/21/24.
 //
-
 import SwiftUI
 
 struct FinishedView: View {
@@ -129,4 +128,3 @@ struct FinishedView: View {
             }
     }
 }
-
