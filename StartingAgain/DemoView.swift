@@ -11,7 +11,6 @@ struct DemoView: View {
 
     static var a: StudyMaterial = StudyMaterial(label: "A", learningDescription: "The letter A in ASL is signed by forming a closed fist and extending your thumb outwards from your fingers.", image: "A")
     @Binding var lesson: Lesson
-    @Binding var path: NavigationPath
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,7 +38,7 @@ struct DemoView: View {
             HStack {
                 Spacer()
                 NavigationLink(destination: {
-                    QuizView(lesson: $lesson, path: $path)
+                    QuizView(lesson: $lesson)
                 }, label: {
                     Text("Continue to Keep Learning")
                         .padding([.leading, .trailing], 40)

@@ -12,7 +12,6 @@ struct QuizView: View {
     @State var selectedLetter: String? = nil
     @State var isNextButtonEnabled: Bool = false
     @Binding var lesson: Lesson
-    @Binding var path: NavigationPath
 
     
     var body: some View {
@@ -73,7 +72,7 @@ struct QuizView: View {
                 
                 VStack(alignment: .center) {
                     if isNextButtonEnabled {
-                        NavigationLink(destination: LetterLearningPage(lesson: $lesson, path: $path)) {
+                        NavigationLink(destination: LetterLearningPage(lesson: $lesson)) {
                             Text("Next")
                                 .padding([.leading, .trailing], 130)
                                 .padding([.top, .bottom], 15)

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LessonWidget: View {
     @State var lesson: Lesson
-    @Binding var path: NavigationPath
 
     var body: some View {
         VStack(alignment: .center) {
@@ -24,7 +23,7 @@ struct LessonWidget: View {
                 Spacer()
             }
                 NavigationLink(
-                    destination: DemoView(lesson: $lesson, path: $path),
+                    destination: DemoView(lesson: $lesson),
                     label: {
                             VStack {
                                 Text("Start")

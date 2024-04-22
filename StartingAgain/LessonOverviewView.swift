@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct LessonOverviewView: View {
-    @State private var path = NavigationPath()
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack {
             ZStack{
                 VStack(alignment: .leading) {
                     Text("Current Lessons")
@@ -21,10 +20,10 @@ struct LessonOverviewView: View {
                         .padding(.top, 20)
                         .font(.system(size: 28))
                     VStack(alignment: .center, spacing: 30) {
-                        LessonWidget(lesson: lessonNumbers, path: $path)
+                        LessonWidget(lesson: lessonNumbers)
                             .padding([.leading, .trailing], 15)
                             .shadow(color: .gray, radius: 5, x: 5, y: 5)
-                        LessonWidget(lesson: lessonAlphabet, path: $path)
+                        LessonWidget(lesson: lessonAlphabet)
                             .padding([.leading, .trailing], 15)
                             .shadow(color: .gray, radius: 5, x: 5, y: 5)
                         Spacer()
