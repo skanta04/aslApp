@@ -11,6 +11,7 @@ struct FinishedView: View {
     static var lessonPreview: Lesson = Lesson(toStudy: [one, two, three], correctStatements: ["You got this!", "You rock!", "Let's go!"], number: 2, name: "Basic Numbers", description: "Learning numbers 1, 2, and 3", currentIndex: 0)
     @Binding var lesson: Lesson
     @State private var tiltAngle: Double = 0
+    @Binding var path: NavigationPath
     let tiltAmount: Double = 20 // Adjust the amount of tilt as needed
     let animationDuration: Double = 2
     
@@ -98,15 +99,19 @@ struct FinishedView: View {
                     }
                     
                     NavigationLink(destination: LessonOverviewView()) {
-                        Text("Continue to Keep Learning")
-                            .padding([.leading, .trailing], 40)
-                            .padding([.top, .bottom], 15)
-                            .background(Color.leafgreen)
-                            .cornerRadius(20)
-                            .padding(.bottom, 10)
-                            .foregroundColor(Color.maroon)
-                            .fontWeight(.semibold)
-                            .font(.system(size: 20))
+                        Button(action: {
+                            path = NavigationPath()
+                        }, label: {
+                            Text("Continue to Keep Learning")
+                                .padding([.leading, .trailing], 40)
+                                .padding([.top, .bottom], 15)
+                                .background(Color.leafgreen)
+                                .cornerRadius(20)
+                                .padding(.bottom, 10)
+                                .foregroundColor(Color.maroon)
+                                .fontWeight(.semibold)
+                                .font(.system(size: 20))
+                        })
                         
                     }
                     
@@ -116,6 +121,3 @@ struct FinishedView: View {
     }
 }
 
-#Preview {
-        FinishedView(lesson: .constant(FinishedView.lessonPreview))
-}

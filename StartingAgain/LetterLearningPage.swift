@@ -13,6 +13,8 @@ struct LetterLearningPage: View {
     @StateObject private var model = FrameHandler()
     @Binding var lesson: Lesson
     @State private var isCorrect: Bool = true
+    @Binding var path: NavigationPath
+
 
 
     var body: some View {
@@ -36,7 +38,7 @@ struct LetterLearningPage: View {
                     
                     if isCorrect == true {
                         if lesson.currentIndex < 2 {
-                            NavigationLink(destination: DemoView(lesson: $lesson)) {
+                            NavigationLink(destination: DemoView(lesson: $lesson, path: $path)) {
                                 
                                 Button ( action: {
                                     lesson.currentIndex += 1
@@ -53,7 +55,7 @@ struct LetterLearningPage: View {
                                 })
                             }}
                         else {
-                            NavigationLink(destination: FinishedView(lesson: $lesson), label: {
+                            NavigationLink(destination: FinishedView(lesson: $lesson, path: $path), label: {
                                 Text("Finish Lesson!")
                                     .padding([.leading, .trailing], 130)
                                     .padding([.top, .bottom], 15)
@@ -87,7 +89,3 @@ struct LetterLearningPage: View {
     }
 }
 
-
-#Preview {
-    LetterLearningPage(lesson: .constant(lessonNumbers))
-}
