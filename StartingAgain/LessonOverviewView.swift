@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LessonOverviewView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack{
                 VStack(alignment: .leading) {
                     Text("Current Lessons")
