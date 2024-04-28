@@ -10,7 +10,7 @@ import SwiftUI
 struct LessonWidget: View {
     @Binding var lesson: Lesson
     @Binding var gameState: GameState
-    let onTap: () -> Void // Closure to handle tapping the lesson widget
+    let onTap: () -> Void
     
     var body: some View {
             VStack(alignment: .center) {
@@ -25,9 +25,9 @@ struct LessonWidget: View {
                     Spacer()
                 }
                 Button(action: {
+                    lesson.startTime = Date()
                     onTap()
                     gameState = GameState.demoView
-                    updateTime()
                 }, label: {
                     VStack {
                         Text("Start")
@@ -41,21 +41,6 @@ struct LessonWidget: View {
                     }
                 })
                 .buttonStyle(PlainButtonStyle())
-                /*
-                NavigationLink(
-                    destination: DemoView(lesson: $lesson),
-                    label: {
-                        VStack {
-                            Text("Start")
-                                .fontWeight(.bold)
-                                .font(.system(size: 20))
-                                .foregroundColor(.white)
-                                .padding([.top, .bottom], 6)
-                                .padding([.leading, .trailing], 130)
-                                .background(Color("MainGreen"))
-                                .clipShape(Capsule())
-                        }
-                    })*/
                 
             }
             .padding(.leading, 10)
@@ -63,19 +48,6 @@ struct LessonWidget: View {
             .background(Color.lightPurple)
             .cornerRadius(10)
         }
-    func updateTime() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm:ss"
-        let now = Date()
-        
-        // Convert the current date to a string
-        let startTimeString = dateFormatter.string(from: now)
-        
-        // Assign the string to lesson.startTime
-        lesson.startTime = startTimeString
-    }
-
-
+    
 }
-
 

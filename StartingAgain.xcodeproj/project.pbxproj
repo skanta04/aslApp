@@ -12,7 +12,6 @@
 		7B66C2802BD5D279005FDCDD /* LetterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B66C27F2BD5D279005FDCDD /* LetterCardView.swift */; };
 		7B66C2822BD5D29C005FDCDD /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B66C2812BD5D29C005FDCDD /* QuizView.swift */; };
 		7B817A692BD63607006C004A /* CorrectNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B817A682BD63607006C004A /* CorrectNextButton.swift */; };
-		7B817A722BD637AC006C004A /* success-1-6297.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B817A712BD637AC006C004A /* success-1-6297.mp3 */; };
 		7BB9EFAB2BD44AAB001AAD22 /* StartingAgainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9EFAA2BD44AAB001AAD22 /* StartingAgainApp.swift */; };
 		7BB9EFAF2BD44AAC001AAD22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9EFAE2BD44AAC001AAD22 /* Assets.xcassets */; };
 		7BB9EFB22BD44AAC001AAD22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9EFB12BD44AAC001AAD22 /* Preview Assets.xcassets */; };
@@ -32,6 +31,7 @@
 		7BBB75842BD5B63D008BDB8C /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBB75832BD5B63D008BDB8C /* FrameView.swift */; };
 		7BF5592A2BD5CCD000B2F706 /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF559292BD5CCD000B2F706 /* FinishedView.swift */; };
 		B17511582BD59AF600594D7E /* InputingNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17511572BD59AF600594D7E /* InputingNameView.swift */; };
+		C41BD05B2BD6F5F600F91495 /* success-1-6297.wav in Resources */ = {isa = PBXBuildFile; fileRef = C41BD05A2BD6F5F600F91495 /* success-1-6297.wav */; };
 		C43FDC592BD641BF0091FD11 /* Prototype.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C43FDC582BD641BF0091FD11 /* Prototype.mlmodel */; };
 		C4FBC2022BD45FBB0019480F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2012BD45FBB0019480F /* HomeView.swift */; };
 		C4FBC2042BD465E20019480F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBC2032BD465E20019480F /* LoadingView.swift */; };
@@ -43,7 +43,6 @@
 		7B66C27F2BD5D279005FDCDD /* LetterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCardView.swift; sourceTree = "<group>"; };
 		7B66C2812BD5D29C005FDCDD /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		7B817A682BD63607006C004A /* CorrectNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectNextButton.swift; sourceTree = "<group>"; };
-		7B817A712BD637AC006C004A /* success-1-6297.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "success-1-6297.mp3"; sourceTree = "<group>"; };
 		7BB9EFA72BD44AAB001AAD22 /* StartingAgain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StartingAgain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB9EFAA2BD44AAB001AAD22 /* StartingAgainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingAgainApp.swift; sourceTree = "<group>"; };
 		7BB9EFAE2BD44AAC001AAD22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		7BBB75832BD5B63D008BDB8C /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FrameView.swift; path = ../FrameView.swift; sourceTree = "<group>"; };
 		7BF559292BD5CCD000B2F706 /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
 		B17511572BD59AF600594D7E /* InputingNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputingNameView.swift; sourceTree = "<group>"; };
+		C41BD05A2BD6F5F600F91495 /* success-1-6297.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "success-1-6297.wav"; path = "../../../../../../Downloads/success-1-6297.wav"; sourceTree = "<group>"; };
 		C43FDC582BD641BF0091FD11 /* Prototype.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Prototype.mlmodel; path = ../../MyHandPoseClassifier.ml/Models/Prototype.mlmodel; sourceTree = "<group>"; };
 		C4FBC2012BD45FBB0019480F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C4FBC2032BD465E20019480F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		7B817A6C2BD636AF006C004A /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				7B817A712BD637AC006C004A /* success-1-6297.mp3 */,
+				C41BD05A2BD6F5F600F91495 /* success-1-6297.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -231,9 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B817A722BD637AC006C004A /* success-1-6297.mp3 in Resources */,
 				7BBB75722BD598B8008BDB8C /* Fonts in Resources */,
 				7BB9EFB22BD44AAC001AAD22 /* Preview Assets.xcassets in Resources */,
+				C41BD05B2BD6F5F600F91495 /* success-1-6297.wav in Resources */,
 				7BB9EFAF2BD44AAC001AAD22 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

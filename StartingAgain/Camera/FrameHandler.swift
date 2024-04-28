@@ -108,12 +108,13 @@ class FrameHandler: NSObject, ObservableObject {
                 print("This is the hand pose observation: \(handPoseObservation)")
                 do {
                     let keypointsMultiArray = try handPoseObservation.keypointsMultiArray()
-                    print("This is the hand pose prediction: \(keypointsMultiArray)")
+                    //print("This is the hand pose prediction: \(keypointsMultiArray)")
                     let finalPrediction = try model.prediction(poses: keypointsMultiArray)
-                    print("This is the final prediction: \(finalPrediction.label)")
+                   // print("This is the final prediction: \(finalPrediction.label)")
+                    let confidence = finalPrediction.labelProbabilities[finalPrediction.label]!
+                   // print("This is the confidence levels: \(confidence)")
                     return finalPrediction.label
-                    // let confidence = finalPrediction.labelProbabilities[finalPrediction.label]!
-                    // print("This is the confidence levels: \(confidence)")
+
 
                 } catch {
                     print("Error converting hand pose observation to a key points multi array: \(error.localizedDescription)")

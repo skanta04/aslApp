@@ -25,12 +25,14 @@ struct HomeView: View {
                         .fontWeight(.regular)
                         .font(.system(size: 20))
                     Spacer()
-                    NavigationLink(destination: LoadingView()) {
+                    NavigationLink(destination: LoadingView()
+                        .navigationBarBackButtonHidden(true) 
+) {
                         Text("Get Started")
                             .padding([.leading, .trailing], 120)
                             .padding([.top, .bottom], 15)
                             .background(Color.leafgreen)
-                            .cornerRadius(10)
+                            .cornerRadius(20)
                             .padding(.bottom, 10)
                             .foregroundColor(.black)
                             .fontWeight(.semibold)
@@ -39,8 +41,9 @@ struct HomeView: View {
                     }
                 }
                 .foregroundColor(.white)
-                
+    
             }
+
         }
    }
 }

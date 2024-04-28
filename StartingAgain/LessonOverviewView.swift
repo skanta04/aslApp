@@ -21,7 +21,7 @@ struct LessonOverviewView: View {
                         .foregroundColor(Color.maroon)
                         .padding(.leading, 20)
                         .padding(.top, 20)
-                        .font(.system(size: 28))
+                        .font(.custom("WendyOne-Regular", size: 28))
                     VStack(alignment: .center, spacing: 30) {
                         LessonWidget(lesson: $lessonAlphabet, gameState: $gameState) {
                             handleLessonTap(lesson: lessonAlphabet)

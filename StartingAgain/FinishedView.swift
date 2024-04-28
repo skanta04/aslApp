@@ -4,6 +4,7 @@
 //
 //  Created by Saishreeya Kantamsetty on 4/21/24.
 //
+
 import SwiftUI
 
 struct FinishedView: View {
@@ -79,7 +80,7 @@ struct FinishedView: View {
                                 .padding(.trailing, 10)
                             VStack(alignment: .leading) {
                                 Text("Total Time Spent")
-                                Text(lesson.lessonLength ?? "Lesson length cannot be determined")
+                                Text(lesson.calculateLessonLength())
                                     .fontWeight(.bold)
                                     .font(.system(size: 25))
                             }
@@ -111,17 +112,6 @@ struct FinishedView: View {
                             .font(.system(size: 20))
                     })
                     .buttonStyle(PlainButtonStyle())
-                    /*NavigationLink(destination: LessonOverviewView()) {
-                            Text("Continue to Keep Learning")
-                                .padding([.leading, .trailing], 40)
-                                .padding([.top, .bottom], 15)
-                                .background(Color.leafgreen)
-                                .cornerRadius(20)
-                                .padding(.bottom, 10)
-                                .foregroundColor(Color.maroon)
-                                .fontWeight(.semibold)
-                                .font(.system(size: 20))
-                    }*/
 
                 }
                 .padding([.trailing, .leading], 20)

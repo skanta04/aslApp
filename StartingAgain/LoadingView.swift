@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct LoadingView: View {
+    @State var isLoading: Bool = true
     var body: some View {
         ZStack {
-            VStack {
-                Text("Loading lessons ...")
-                    .foregroundColor(Color.leafgreen)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 30))
-                ZStack {
+            Color.white
+                .edgesIgnoringSafeArea(.all)
+            if isLoading {
+                VStack {
+                    Text("Loading lessons ...")
+                        .foregroundColor(Color.leafgreen)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 30))
+                    ZStack {
                         Image("cloud")
                             .resizable()
                             .scaledToFit()
@@ -25,10 +29,10 @@ struct LoadingView: View {
                             .multilineTextAlignment(.center)
                             .font(.system(size: 12))
                             .padding(.top, 20)
-            
+                        
                     }
                     .padding(.leading, -160)
-                ZStack {
+                    ZStack {
                         Image("cloud")
                             .resizable()
                             .scaledToFit()
@@ -38,18 +42,30 @@ struct LoadingView: View {
                             .multilineTextAlignment(.center)
                             .font(.system(size: 12))
                             .padding(.top, 15)
-
-            
+                        
+                        
                     }
                     .padding(.trailing, -160)
-                Image("leaf2")
-                    .resizable()
-                    .scaledToFit()
+                    Image("leaf2")
+                        .resizable()
+                        .scaledToFit()
+                    
+                }
+            } else {
+                ContentView()
             }
+
+            
         }
+        .onAppear {
+             Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+                 self.isLoading = false
+             }
+         }
+        
     }
 }
 
 #Preview {
-    LoadingView()
+    LoadingView() // Simulating loading state as true
 }
